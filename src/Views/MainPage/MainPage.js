@@ -1,9 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react';
-import HeroSlider from '../../components/HeroSlider/';
-import ProductsList from '../../components/ProductsList';
-import ProductsPagination from '../../components/ProductsPagination';
-import { storeContext } from '../../contexts/StoreContext';
-import MainLayout from '../../Layouts/MainLayout';
+import React, { useContext, useEffect, useState } from "react";
+import HeroSlider from "../../components/HeroSlider/";
+import ProductsList from "../../components/ProductsList";
+import ProductsPagination from "../../components/ProductsPagination";
+import { storeContext } from "../../contexts/StoreContext";
+import MainLayout from "../../Layouts/MainLayout";
+import HeroImg from "../../assets/images/hero.jpeg";
+import HeroImg2 from "../../assets/images/hero2.jpeg";
 
 export default function MainPage() {
   const { products, fetchProducts, total } = useContext(storeContext);
@@ -13,14 +15,19 @@ export default function MainPage() {
     fetchProducts(page - 1);
   }, [page]);
 
+  const heroSlider = [
+    { src: HeroImg, title: "hero" },
+    { src: HeroImg2, title: "hero" },
+  ];
+
   return (
     <MainLayout>
-      <HeroSlider />
+      <HeroSlider slider={heroSlider} />
       <ProductsList products={products} />
       <ProductsPagination
         setPage={setPage}
         page={page}
-        total={Math.ceil(total / 4)}
+        count={Math.ceil(total / 4)}
       />
     </MainLayout>
   );

@@ -1,36 +1,37 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
-import AddIcon from '@material-ui/icons/Add';
-import { Fab } from '@material-ui/core';
-import { useHistory } from 'react-router';
-import { NavLink } from 'react-router-dom';
-import SearchBar from '../components/SearchBar';
+import React, { useContext, useEffect } from "react";
+import clsx from "clsx";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import Drawer from "@material-ui/core/Drawer";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import List from "@material-ui/core/List";
+import Typography from "@material-ui/core/Typography";
+import Divider from "@material-ui/core/Divider";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import InboxIcon from "@material-ui/icons/MoveToInbox";
+import MailIcon from "@material-ui/icons/Mail";
+import AddIcon from "@material-ui/icons/Add";
+import { Fab } from "@material-ui/core";
+import { useHistory } from "react-router";
+import { NavLink } from "react-router-dom";
+import SearchBar from "../components/SearchBar";
+import { storeContext } from "../contexts/StoreContext";
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
+    display: "flex",
   },
   appBar: {
-    transition: theme.transitions.create(['margin', 'width'], {
+    transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
@@ -38,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: drawerWidth,
-    transition: theme.transitions.create(['margin', 'width'], {
+    transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
@@ -47,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   hide: {
-    display: 'none',
+    display: "none",
   },
   drawer: {
     width: drawerWidth,
@@ -57,45 +58,49 @@ const useStyles = makeStyles((theme) => ({
     width: drawerWidth,
   },
   drawerHeader: {
-    display: 'flex',
-    alignItems: 'center',
+    display: "flex",
+    alignItems: "center",
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-    justifyContent: 'flex-end',
+    justifyContent: "flex-end",
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
+    transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
     marginLeft: -drawerWidth,
-    minHeight: '100vh',
-    position: 'relative',
+    minHeight: "100vh",
+    position: "relative",
   },
   addBtn: {
-    position: 'fixed',
-    top: '50%',
+    position: "fixed",
+    top: "50%",
     right: 15,
   },
   contentShift: {
-    transition: theme.transitions.create('margin', {
+    transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
     marginLeft: 0,
   },
   navContent: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-between',
+    width: "100%",
+    display: "flex",
+    justifyContent: "space-between",
   },
   logo: {
-    [theme.breakpoints.down('sm')]: {
-      display: 'none',
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
     },
+  },
+  brandLogo: {
+    width: 56,
+    objectFit: "contain",
   },
 }));
 
@@ -103,6 +108,10 @@ export default function MainLayout(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const { fetchBrands, brands } = useContext(storeContext);
+  useEffect(() => {
+    fetchBrands();
+  }, []);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -137,7 +146,7 @@ export default function MainLayout(props) {
           <div className={classes.navContent}>
             <NavLink
               className={classes.logo}
-              style={{ textDecoration: 'none', color: '#fff' }}
+              style={{ textDecoration: "none", color: "#fff" }}
               to="/"
             >
               <Typography variant="h6" noWrap>
@@ -160,7 +169,7 @@ export default function MainLayout(props) {
       >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? (
+            {theme.direction === "ltr" ? (
               <ChevronLeftIcon />
             ) : (
               <ChevronRightIcon />
@@ -168,24 +177,18 @@ export default function MainLayout(props) {
           </IconButton>
         </div>
         <Divider />
+
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
+          {brands.map((brand) => (
+            <ListItem button key={brand.id}>
+              <ListItemText primary={brand.title} />
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                <img
+                  src={brand.logo}
+                  alt={`${brand.title} logo`}
+                  className={classes.brandLogo}
+                />
               </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
             </ListItem>
           ))}
         </List>
@@ -198,7 +201,7 @@ export default function MainLayout(props) {
         <div style={{ height: 64 }}></div>
         {props.children}
         <Fab
-          onClick={() => history.push('/products/create')}
+          onClick={() => history.push("/products/create")}
           className={classes.addBtn}
           color="primary"
           aria-label="add"

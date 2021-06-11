@@ -1,10 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import MainPage from './Views/MainPage/MainPage';
-import ProductCreatePage from './Views/ProductCreatePage/ProductCreatePage';
-import ProductDetailPage from './Views/ProductDetailPage/ProductDetailPage';
-import ProductUpdatePage from './Views/ProductUpdatePage/ProductUpdatePage';
-import SearchResultPage from './Views/SearchResultPage/SearchResultPage';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import BrandPage from "./Views/BrandPage/BrandPage";
+import MainPage from "./Views/MainPage/MainPage";
+import ProductCreatePage from "./Views/ProductCreatePage/ProductCreatePage";
+import ProductDetailPage from "./Views/ProductDetailPage/ProductDetailPage";
+import ProductUpdatePage from "./Views/ProductUpdatePage/ProductUpdatePage";
+import SearchResultPage from "./Views/SearchResultPage/SearchResultPage";
 
 export default function Routes() {
   return (
@@ -23,6 +24,7 @@ export default function Routes() {
           component={ProductUpdatePage}
           exact
         />
+        <Route path="/brand/:id" component={BrandPage} exact />
       </Switch>
     </Router>
   );

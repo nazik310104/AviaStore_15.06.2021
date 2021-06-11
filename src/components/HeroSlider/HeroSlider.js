@@ -1,12 +1,10 @@
-import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import HeroImg from '../../assets/images/hero.jpeg';
-import HeroImg2 from '../../assets/images/hero2.jpeg';
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
 
-import classes from './heroSlider.module.css';
-import 'react-responsive-carousel/lib/styles/carousel.css';
+import classes from "./heroSlider.module.css";
+import "react-responsive-carousel/lib/styles/carousel.css";
 
-export default function HeroSlider() {
+export default function HeroSlider({ slider }) {
   return (
     <Carousel
       className={classes.sliderWrapper}
@@ -14,12 +12,11 @@ export default function HeroSlider() {
       showThumbs={false}
       infiniteLoop={true}
     >
-      <div className={classes.heroImg}>
-        <img src={HeroImg} alt="hero" />
-      </div>
-      <div className={classes.heroImg}>
-        <img src={HeroImg2} alt="hero" />
-      </div>
+      {slider.map((image) => (
+        <div className={classes.heroImg}>
+          <img src={image.src} alt={image.title} />
+        </div>
+      ))}
     </Carousel>
   );
 }
