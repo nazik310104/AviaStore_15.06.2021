@@ -1,11 +1,16 @@
 import axios from "axios";
 import React, { useReducer } from "react";
+import { calcSubPrice, calcTotalPrice } from "../helpers/calcPrice";
 
 const INIT_STATE = {
   products: [],
   brands: [],
+
+  brandDetail: null,
+
   productDetail: null,
   total: 0,
+  cart: {},
 };
 
 const reducer = (state = INIT_STATE, action) => {
@@ -38,11 +43,24 @@ const reducer = (state = INIT_STATE, action) => {
         ...state,
         productDetail: null,
       };
+
     case "SET_BRANDS":
       return {
         ...state,
         brands: action.payload,
       };
+
+    case "SET_BRAND_DETAIL":
+      return {
+        ...state,
+        brandDetail: action.payload,
+      };
+    case "GET_CART":
+      return {
+        ...state,
+        cart: action.payload,
+      };
+
     default:
       return state;
   }
@@ -77,9 +95,12 @@ export default function StoreContextProvider(props) {
   const fetchSearchProducts = async (value) => {
     const response = await axios.get(`${URL}/products/?q=${value}`);
     const products = response.data;
-    const total = response.headers[`x-total-count`];
+
+    const total = response.headers["x-total-count"];
+
     dispatch({
       type: "SET_PRODUCTS",
+
       payload: {
         data: products,
         total,
@@ -130,10 +151,12 @@ export default function StoreContextProvider(props) {
       payload: brands,
     });
   };
+
   const fetchBrandProducts = async (brandId) => {
     const response = await axios.get(`${URL}/products/?brand=${brandId}`);
     const products = response.data;
     const total = response.headers["x-total-count"];
+
     dispatch({
       type: "SET_PRODUCTS",
       payload: {
@@ -142,12 +165,80 @@ export default function StoreContextProvider(props) {
       },
     });
   };
+
+  const fetchBrandDetail = async (brandId) => {
+    const response = await axios.get(`${URL}/brands/${brandId}`);
+    const brand = response.data;
+
+    dispatch({
+      type: "SET_BRAND_DETAIL",
+      payload: brand,
+    });
+  };
+  const getCart = () => {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    if (!cart) {
+      cart = {
+        products: [],
+        totalPrice: 0,
+      };
+    }
+    dispatch({ type: "GET_CART", payload: cart });
+  };
+  const addProductToCart = (product) => {
+    console.log(product);
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    if (!cart) {
+      cart = {
+        products: [],
+        totalPrice: 0,
+      };
+    }
+
+    let newProduct = {
+      item: product,
+      count: 1,
+      subPrice: 0,
+    };
+
+    //если кликнутый продукт есть в корзине, то удаляем, а если нет то пушим
+    let filteredCart = cart.products.filter(
+      (elem) => elem.item.id === product.id
+    );
+    if (filteredCart.length > 0) {
+      cart.products = cart.products.filter(
+        (elem) => elem.item.id !== product.id
+      );
+    } else {
+      cart.products.push(newProduct);
+    }
+
+    newProduct.subPrice = calcSubPrice(newProduct);
+    cart.totalPrice = calcTotalPrice(cart.products);
+    localStorage.setItem("cart", JSON.stringify(cart));
+  };
+  const changeProductCount = (count, id) => {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    cart.products = cart.products.map((elem) => {
+      if (elem.item.id === id) {
+        elem.count = count;
+        elem.subPrice = calcSubPrice(elem);
+      }
+      return elem;
+    });
+    cart.totalPrice = calcTotalPrice(cart.products);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    getCart();
+  };
+
   return (
     <storeContext.Provider
       value={{
         products: state.products,
         total: state.total,
         productDetail: state.productDetail,
+        brands: state.brands,
+        brandDetail: state.brandDetail,
         fetchProducts,
         fetchProductDetail,
         createProduct,
@@ -155,8 +246,13 @@ export default function StoreContextProvider(props) {
         updateProduct,
         fetchSearchProducts,
         fetchBrands,
-        brands: state.brands,
+
         fetchBrandProducts,
+        fetchBrandDetail,
+        getCart,
+        addProductToCart,
+        changeProductCount,
+        cart: state.cart,
       }}
     >
       {props.children}

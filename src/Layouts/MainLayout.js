@@ -15,14 +15,14 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
 import AddIcon from "@material-ui/icons/Add";
 import { Fab } from "@material-ui/core";
 import { useHistory } from "react-router";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
 import { storeContext } from "../contexts/StoreContext";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import AccountCircle from "@material-ui/icons/AccountCircle";
 
 const drawerWidth = 240;
 
@@ -100,6 +100,7 @@ const useStyles = makeStyles((theme) => ({
   },
   brandLogo: {
     width: 56,
+
     objectFit: "contain",
   },
 }));
@@ -156,6 +157,20 @@ export default function MainLayout(props) {
 
             <SearchBar />
           </div>
+          <IconButton
+            aria-label="account of current user"
+            // aria-controls={menuId}
+            aria-haspopup="true"
+            // onClick={handleProfileMenuOpen}
+            color="inherit"
+          >
+            <AccountCircle />
+          </IconButton>
+          <Link to="/cart" style={{ textDecoration: "none", color: "white" }}>
+            <IconButton color="inherit">
+              <ShoppingCartIcon />
+            </IconButton>
+          </Link>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -180,16 +195,18 @@ export default function MainLayout(props) {
 
         <List>
           {brands.map((brand) => (
-            <ListItem button key={brand.id}>
-              <ListItemText primary={brand.title} />
-              <ListItemIcon>
-                <img
-                  src={brand.logo}
-                  alt={`${brand.title} logo`}
-                  className={classes.brandLogo}
-                />
-              </ListItemIcon>
-            </ListItem>
+            <Link to={`/brand/${brand.id}`}>
+              <ListItem button key={brand.id}>
+                <ListItemText primary={brand.title} />
+                <ListItemIcon>
+                  <img
+                    className={classes.brandLogo}
+                    src={brand.logo}
+                    alt={`${brand.title} logo`}
+                  />
+                </ListItemIcon>
+              </ListItem>
+            </Link>
           ))}
         </List>
       </Drawer>

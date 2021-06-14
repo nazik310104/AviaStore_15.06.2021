@@ -12,11 +12,14 @@ const useStyles = makeStyles(() => ({
 
 export default function ProductsPagination({ count, page, setPage }) {
   const classes = useStyles();
-  //count - amount of pages in pagination
-  //page - currentPage
+
+  // count - amount of pages in pagination
+  // page - currentPage
+
   return (
     <Pagination
-      //change current page ti clicked page
+      // change current page to clicked page
+
       onChange={(_, _page) => setPage(_page)}
       count={count}
       page={page}
