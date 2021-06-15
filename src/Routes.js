@@ -7,6 +7,7 @@ import ProductDetailPage from "./Views/ProductDetailPage/ProductDetailPage";
 import ProductUpdatePage from "./Views/ProductUpdatePage/ProductUpdatePage";
 import SearchResultPage from "./Views/SearchResultPage/SearchResultPage";
 import Cart from "./components/Cart/Cart";
+import AccountPage from "./Views/AccountPage/AccountPage";
 
 export default function Routes() {
   return (
@@ -27,6 +28,7 @@ export default function Routes() {
         />
         <Route path="/brand/:id" component={BrandPage} exact />
         <Route path="/cart" component={Cart} exact />
+        <Route path="/account" component={AccountPage} exact />
       </Switch>
     </Router>
   );

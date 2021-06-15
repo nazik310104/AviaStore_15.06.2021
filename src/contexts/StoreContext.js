@@ -194,6 +194,13 @@ export default function StoreContextProvider(props) {
         totalPrice: 0,
       };
     }
+    //     const saveToCartBtn = (id) => `<button onclick="saveProductToCart(this)" class="btn btn-success" data-id="${id}">
+    //     <img src="./assets/icons/cart.png" alt="cart-icon">
+    //     </button>`;
+
+    // const rmvFromCartBtn = (id) => `<button onclick="rmvProductFromCart(this)" class="btn btn-danger" data-id="${id}">
+    // <img src="./assets/icons/cart.png" alt="cart-icon">
+    // </button>`;
 
     let newProduct = {
       item: product,

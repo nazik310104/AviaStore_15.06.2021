@@ -23,7 +23,8 @@ import SearchBar from "../components/SearchBar";
 import { storeContext } from "../contexts/StoreContext";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import AccountCircle from "@material-ui/icons/AccountCircle";
-
+import fontClasses from "./mainLayout.module.css";
+import HeroIcon from "../assets/images/-.svg";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -35,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+    backgroundColor: "#FC5404",
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -143,6 +145,13 @@ export default function MainLayout(props) {
           >
             <MenuIcon />
           </IconButton>
+          <NavLink to="/">
+            <img
+              src={HeroIcon}
+              alt="heroIcon"
+              className={fontClasses.heroIcon}
+            />
+          </NavLink>
 
           <div className={classes.navContent}>
             <NavLink
@@ -150,8 +159,8 @@ export default function MainLayout(props) {
               style={{ textDecoration: "none", color: "#fff" }}
               to="/"
             >
-              <Typography variant="h6" noWrap>
-                MyStore
+              <Typography variant="h6" noWrap className={fontClasses.logoName}>
+                Avia Store
               </Typography>
             </NavLink>
 

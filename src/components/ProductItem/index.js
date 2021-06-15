@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -10,10 +10,14 @@ import Typography from "@material-ui/core/Typography";
 import Truncate from "react-truncate";
 import { useHistory } from "react-router";
 import { storeContext } from "../../contexts/StoreContext";
+import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+import { IconButton } from "@material-ui/core";
+import { notifySuccess } from "../../helpers/notifiers";
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    backgroundColor: "#FFF5AB",
   },
   media: {
     height: 140,
@@ -22,15 +26,33 @@ const useStyles = makeStyles({
     height: 100,
     marginTop: 20,
   },
+  // cartIconActive: {
+  //   color: "primary",
+  // },
+  // cartIconAnactive: {
+  //   color: "secondary",
+  // },
 });
 
 export default function ProductItem({ data }) {
   const classes = useStyles();
 
   const { title, images, price, description, id } = data;
-  const { addProductToCart } = useContext(storeContext);
+  const { addProductToCart, cart, getCart, changeProductCount } =
+    useContext(storeContext);
 
   const history = useHistory();
+  const [cartState, setCartState] = useState("primary");
+
+  useEffect(() => {
+    getCart();
+  }, []);
+  const saveToCartBtn = () => {
+    setCartState("secondary");
+  };
+  const rmvFromCartBtn = () => {
+    setCartState("primary");
+  };
 
   return (
     <Card className={classes.root}>
@@ -58,17 +80,25 @@ export default function ProductItem({ data }) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button
-          onClick={() => addProductToCart(data)}
-          size="small"
-          color="primary"
+        <IconButton
+          onClick={(e) => {
+            addProductToCart(data);
+            setCartState("secondary");
+            cart.products.forEach((product) => {
+              product.item.id === id
+                ? setCartState("secondary")
+                : setCartState("primary");
+            });
+          }}
+          color={cartState}
+          id="cartIcon"
         >
-          Cart
-        </Button>
+          <AddShoppingCartIcon />
+        </IconButton>
         <Button
           onClick={() => history.push(`/products/${id}`)}
           size="small"
-          color="primary"
+          color="secondary"
         >
           Далее
         </Button>

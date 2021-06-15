@@ -1,166 +1,246 @@
 {
-
-
   "brands": [
     {
       "id": 1,
-      "title": "Adidas",
-      "logo": "https://www.adidas.ru/glass/react/f1fa822/assets/img/icon-adidas-logo.svg",
-      "sliderImages":["https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/ruRU/Images/YEEZY_BOOST_700_ENFLAME_AMBER_HP-d_tcm224-692218.jpg", "https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/ruRU/Images/YEEZY_BOOST_700_ENFLAME_AMBER_HP-d_tcm224-692218.jpg"]
+      "title": "Turkish Airlines",
+      "logo": "https://kochevnik.kg/wp-content/uploads/2021/02/Turkish-Airlines-Logo.jpg",
+      "sliderImages": [
+        "https://mk-turkey.ru/media/images/economics/airlines-turkish.jpg",
+        "https://cdn.turkishairlines.com/m/567020fe6c6685b8/original/500x250-Covid-19-jpg.jpg"
+      ]
     },
     {
       "id": 2,
-      "title": "Nike",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1280px-Logo_NIKE.svg.png",
-      "sliderImages":["https://static.nike.com/a/images/f_auto/dpr_2.0/w_1328,c_limit/8d46e417-036f-4ce1-980b-7b1e47752c13/nike-just-do-it.jpg", "https://static.nike.com/a/images/f_auto/w_1920,c_limit/0c029a94-ec88-4c53-bae8-557c35154c62/image.jpg"]
-    },
-    {
-      "id": 3,
-      "title": "Puma",
-      "logo": "https://upload.wikimedia.org/wikipedia/ru/thumb/b/b4/Puma_logo.svg/2560px-Puma_logo.svg.png",
-      "sliderImages":["https://ru.puma.com/media/contentmanager/content/21SS_ECOM_MF_SP_SELECT_Felipe_Pantone_SplitHeroLeft_Tab__1536x1536_1.jpg", "https://ru.puma.com/media/contentmanager/content/3_1536x1536_3.jpg"]
-    }
-  ],
-
-  "products": [
-    {
-      "id": 1,
-      "brand": 1,
-      "title": "КРОССОВКИ ДЛЯ БЕГА ULTRABOOST 21 PRIMEBLUE",
-      "price": 15999,
-      "description": "Понятие 'лучший' не статично. Когда мы впервые запустили adidas Ultraboost, это были лучшие беговые кроссовки в нашей истории. С каждой новой версией мы поднимаем планку. Теперь ты получаешь амортизацию, о которой даже не подозревал, и возврат энергии, которого ты всегда хотел. У этой модели поддерживающий верх adidas Primeknit+ и на 6% больше капсул Boost в подошве. Она заряжает каждый шаг дополнительной энергией благодаря системе Linear Energy Push, которая обеспечивает поддержку в передней и средней частях стопы.",
-      "images": [
-        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/d7b701392efc440db995ac840136d86f_9366/Krossovki_dlya_bega_Ultraboost_21_Primeblue_sinij_FX7729_01_standard.jpg",
-        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/ca46e3d28b404b3f9d2fac84013701ea_9366/Krossovki_dlya_bega_Ultraboost_21_Primeblue_sinij_FX7729_011_hover_standard.jpg",
-        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/040276e8221849b7a886ac840136e465_9366/Krossovki_dlya_bega_Ultraboost_21_Primeblue_sinij_FX7729_02_standard.jpg"
+      "title": "Air Bishkek",
+      "logo": "https://upload.wikimedia.org/wikipedia/ru/0/0b/Kyrgyz_airways.png",
+      "sliderImages": [
+        "https://www.ch-aviation.com/images/stockPhotos/4344/022efc93a4648c0b1c0d66786263117eb78ca074.jpg",
+        "https://i.pinimg.com/474x/63/24/57/6324573ec60164bc9d6fd43eeb9ee0e7.jpg"
       ]
     },
     {
       "id": 3,
-      "brand": 1,
-      "title": "КРОССОВКИ(Updated Product)",
-      "price": "20000",
-      "description": "Понятие 'лучший' не статично. Когда мы впервые запустили adidas Ultraboost, это были лучшие беговые кроссовки в нашей истории. С каждой новой версией мы поднимаем планку. Теперь ты получаешь амортизацию, о которой даже не подозревал, и возврат энергии, которого ты всегда хотел. У этой модели поддерживающий верх adidas Primeknit+ и на 6% больше капсул Boost в подошве. Она заряжает каждый шаг дополнительной энергией благодаря системе Linear Energy Push, которая обеспечивает поддержку в передней и средней частях стопы.",
-      "images": [
-        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/d7b701392efc440db995ac840136d86f_9366/Krossovki_dlya_bega_Ultraboost_21_Primeblue_sinij_FX7729_01_standard.jpg"
+      "title": "Aeroflot",
+      "logo": "https://1000logos.net/wp-content/uploads/2020/02/Aeroflot-Logo.png",
+      "sliderImages": [
+        "https://lh3.googleusercontent.com/proxy/h8eljP4xOM7qJcIam5lbJMQnigZ0nh6M1_rQMV4mb7X4r6zW83J2E1cGkPs1eTBumfqg4GmeA-G6B72YSRv45ZeO6edp93kT8EsiU5uIJRtU_OSlWfZTvrCx4kRGCF8F_vuaOIzjEV45ZQ",
+        "https://airlinestravel.ro/wp-content/uploads/2020/11/zboruri-moscova-tokyo-aeroflot.jpeg"
       ]
     },
     {
       "id": 4,
-      "brand": 1,
-      "title": "КРОССОВКИ ZX 2K BOOST FUTURESHELL",
-      "price": 12999,
-      "description": "Встречай будущее в этих кроссовках adidas ZX 2K Boost. Модель в стиле ретро-техно вдохновлена беговой обувью 80-х. Верх из сетки и термополиуретана представлен в новых цветах и отдает дань уважения инновационному духу ZX. Половина промежуточной подошвы Boost скрыта полупрозрачным пяточным каркасом для дополнительного комфорта и поддержки.",
-      "images": [
-        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/7f0d83711a3a4b9c8436ace2001cf060_9366/Krossovki_ZX_2K_Boost_Futureshell_rozovyj_G57957_01_standard.jpg",
-        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/3483026165f34633b0f4ace2001cd119_9366/Krossovki_ZX_2K_Boost_Futureshell_rozovyj_G57957_02_standard_hover.jpg"
+      "title": "Fly Dubai",
+      "logo": "https://www.air-agent.ru/wp-content/uploads/2017/08/flydubai_logo.png",
+      "sliderImages": [
+        "https://howtobecabincrew.com/wp-content/uploads/2015/04/flydubai-cabin-crew-2.jpg",
+        "https://howtobecabincrew.com/wp-content/uploads/2015/04/flydubai-cabin-crew-2.jpg"
       ]
     },
     {
-      "title": "Test",
-      "brand": 1,
-
-      "price": "6000",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "images": [
-        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/dd3da032976048bb95c7aafb003005a5_9366/Skalnye_tufli_Five_Ten_Hiangle_belyj_EE9033_01_standard.jpg"
-      ],
-      "id": 5
-    },
-    {
-      "title": "Test",
-      "brand": 1,
-
-      "price": "6000",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "images": [
-        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/14f3ba9b8b0e49e68c4bac3d00ebe218_9366/Krossovki_ZX_1K_Boost_chernyj_FY5649_01_standard.jpg"
-      ],
-      "id": 6
-    },
-    {
-      "id": 7,
-      "brand": 1,
-
-      "title": "КРОССОВКИ ДЛЯ БЕГА ULTRABOOST 21 PRIMEBLUE",
-      "price": 15999,
-      "description": "Понятие 'лучший' не статично. Когда мы впервые запустили adidas Ultraboost, это были лучшие беговые кроссовки в нашей истории. С каждой новой версией мы поднимаем планку. Теперь ты получаешь амортизацию, о которой даже не подозревал, и возврат энергии, которого ты всегда хотел. У этой модели поддерживающий верх adidas Primeknit+ и на 6% больше капсул Boost в подошве. Она заряжает каждый шаг дополнительной энергией благодаря системе Linear Energy Push, которая обеспечивает поддержку в передней и средней частях стопы.",
-      "images": [
-        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/d7b701392efc440db995ac840136d86f_9366/Krossovki_dlya_bega_Ultraboost_21_Primeblue_sinij_FX7729_01_standard.jpg",
-        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/ca46e3d28b404b3f9d2fac84013701ea_9366/Krossovki_dlya_bega_Ultraboost_21_Primeblue_sinij_FX7729_011_hover_standard.jpg",
-        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/040276e8221849b7a886ac840136e465_9366/Krossovki_dlya_bega_Ultraboost_21_Primeblue_sinij_FX7729_02_standard.jpg"
+      "id": 5,
+      "title": "Qatar Airlines",
+      "logo": "data:image/png;base64,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",
+      "sliderImages": [
+        "https://www.logupdateafrica.com/luabackend/assets/uploads/qatar-airways-cargo-to-operate-b777f-to-osaka-4-south-american-destinations-to-join-its-network-from-jan-16.jpg",
+        "https://the-steppe.com/images/news/3840-AWEIg1Hh.jpg"
       ]
     },
     {
-      "id": 8,
+      "id": 6,
+      "title": "Air Manas",
+      "logo": "https://www.airmanas.com/img/airmanas_logo_yellow.jpg",
+      "sliderImages": [
+        "https://cdn.airlines-inform.ru/upload/iblock/22e/Air-Manas-B737-400.jpg",
+        "https://airmanas.com/img/about_company_picture.jpg"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
       "brand": 1,
-
-      "title": "КРОССОВКИ(Updated Product)",
-      "price": "20000",
-      "description": "Понятие 'лучший' не статично. Когда мы впервые запустили adidas Ultraboost, это были лучшие беговые кроссовки в нашей истории. С каждой новой версией мы поднимаем планку. Теперь ты получаешь амортизацию, о которой даже не подозревал, и возврат энергии, которого ты всегда хотел. У этой модели поддерживающий верх adidas Primeknit+ и на 6% больше капсул Boost в подошве. Она заряжает каждый шаг дополнительной энергией благодаря системе Linear Energy Push, которая обеспечивает поддержку в передней и средней частях стопы.",
+      "title": "Mальдивы - райский уголок",
+      "price": "от 1300",
+      "country": ",Mальдивы",
+      "duration": "от 6 дней",
+      "description": "Отпуск на Мальдивах - это особый статус. В архипелаге более тысячи коралловых островов, и каждый из них является маленьким кусочком рая на земле. Удивительный пример того, как можно жить в гармонии с природой, не разрушая, а лишь дополняя окружающие пейзажи. Отели представляют собой, как правило, россыпь роскошных бунгало на берегу Индийского океана. Сюда приезжают влюбленные со всего света, будь то молодожены или семья, отпраздновавшая золотую свадьбу. Их манит атмосфера романтики, неги и единения с окружающим миром. При желании, здесь можно организовать символическую свадебную церемонию, во время которой клятвы Любви и Верности будут принесены трем стихиям: Воде, Воздуху и Земле",
       "images": [
-        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/d7b701392efc440db995ac840136d86f_9366/Krossovki_dlya_bega_Ultraboost_21_Primeblue_sinij_FX7729_01_standard.jpg"
+        "https://rent-a-resort.com/wp-content/uploads/Private-Island-Resort-Maldives_Bungalows.jpg",
+        "https://www.maldives.ru/upload/iblock/9ac/9ac57a15b3352cb29098564a0b7d1d4f.jpg",
+        "https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
       ]
     },
     {
-      "id": 9,
-      "brand": 1,
-
-      "title": "КРОССОВКИ ZX 2K BOOST FUTURESHELL",
-      "price": 12999,
-      "description": "Встречай будущее в этих кроссовках adidas ZX 2K Boost. Модель в стиле ретро-техно вдохновлена беговой обувью 80-х. Верх из сетки и термополиуретана представлен в новых цветах и отдает дань уважения инновационному духу ZX. Половина промежуточной подошвы Boost скрыта полупрозрачным пяточным каркасом для дополнительного комфорта и поддержки.",
-      "images": [
-        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/7f0d83711a3a4b9c8436ace2001cf060_9366/Krossovki_ZX_2K_Boost_Futureshell_rozovyj_G57957_01_standard.jpg",
-        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/3483026165f34633b0f4ace2001cd119_9366/Krossovki_ZX_2K_Boost_Futureshell_rozovyj_G57957_02_standard_hover.jpg"
-      ]
-    },
-    {
-      "title": "Test",
-      "brand": 1,
-
-      "price": "6000",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "images": [
-        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/dd3da032976048bb95c7aafb003005a5_9366/Skalnye_tufli_Five_Ten_Hiangle_belyj_EE9033_01_standard.jpg"
-      ],
-      "id": 10
-    },
-    {
-      "title": "Test",
-      "brand": 1,
-
-      "price": "6000",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "images": [
-        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/14f3ba9b8b0e49e68c4bac3d00ebe218_9366/Krossovki_ZX_1K_Boost_chernyj_FY5649_01_standard.jpg"
-      ],
-      "id":11
-    },
-    {
-      "id":12,
+      "id": 24,
       "brand": 2,
+      "title": "Иссык-Куль",
+      "duration": "от 3 дней",
+      "price": "8900",
+      "description": "Иссык-Кульская область — это самый посещаемый туристами регион Кыргызстана! Главной достопримечательностью области является озеро Иссык-Куль, одно из самых глубоких и больших озер мира, находящееся посреди живописных гор Тянь-Шаня. Также в Иссык-Кульской области располагаются самые высокие горы страны: знаменитая вершина Хан-Тенгри и высочайшая точка Кыргызстана — пик Победы — находятся именно здесь",
+      "images": [
+        "https://too.kg/wp-content/uploads/Ala-kul-e1522147092143-600x400.jpg",
+        "https://sputnik.kg/images/103501/64/1035016411.jpg",
+        "https://too.kg/wp-content/uploads/DSC0405-22-1024x680.jpg",
 
-      "price": 14000,
-      "category": "Nike",
-      "description": "The radiance lives on in the Nike Air Force 1 Low. This b-ball OG puts a fresh spin on what you know best: crisp leather, bold colours and the perfect amount of flash to help you shine. The upper features a digital print Swoosh that rides all the way to the back, leading to a flashy, textured backtab.",
-      "images":["https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5768b674-e92e-4e0a-a565-c4ce648e8b08/air-force-1-low-shoe-r57dLb.png", "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/9639ad8a-c973-4a55-8ee9-4edf551d6638/air-force-1-low-shoe-r57dLb.png"]
+        "https://www.issykkul.biz/Portals/0/GHA_imgs/Karven-raznyye/Karven-Issyk-Kul-na-Issyk-Kule4.jpg_127_4.jpg"
+      ]
     },
     {
-      "id":13,
-      "title": "Jordan Delta 2",
-      "price": 14000,
+      "id": 3,
       "brand": 2,
-
-      "description": "The radiance lives on in the Nike Air Force 1 Low. This b-ball OG puts a fresh spin on what you know best: crisp leather, bold colours and the perfect amount of flash to help you shine. The upper features a digital print Swoosh that rides all the way to the back, leading to a flashy, textured backtab.",
-      "images": ["https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/28e1f15b-b168-4042-88ea-3ebc5d3e9b95/jordan-delta-2-shoe-6Hh2sJ.png", "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/7d054658-08e3-4820-99aa-1d46d72c0a18/jordan-delta-2-shoe-6Hh2sJ.png"]
+      "title": "Греция",
+      "country": "Балканский полуостров",
+      "duration": "от 6 дней",
+      "price": "33 254 KGS",
+      "description": "Греция — страна, где древности на каждом шагу: Афины, Дельфы, Фивы и Метеоры, скальные монастыри и святая гора Афон. Еще здесь классные пляжи, чистое море, живописные острова и спа-отели. Родос, Халкидики и Кос — все о Греции: погода, карты, виза и фото.",
+      "images": [
+        "https://kidpassage.com/images/publications/otdyih-v-gretsii-v-sentyabre-vybiraem-semeynyiy-kurort/1077_64e8bcfb546112b82f1bc8c05d7979a2.jpg"
+      ]
     },
     {
-      "id":14,
-      "title": "КЕДЫ SUEDE MAYU UP WN'S",
-      "price": 9490,
+      "id": 4,
       "brand": 3,
-      "description": "Дерзкие, яркие кеды Suede Mayu UP Wn's – новое поколение модной женской обуви в уличном стиле. Классическая модель Suede преобразилась благодаря массивным пропорциям и платформе с эффектной отделкой. Эта крутая, удобная, универсальная обувь – идеальный вариант для создания супермодного образа.",
-      "images": ["https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/381650/01/sv01/fnd/RUS/w/1000/h/1000/bg/255,255,255", "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/381650/01/fnd/RUS/w/1000/h/1000/bg/255,255,255"]
+      "title": "Отдых на Сейшелах ",
+      "country": "Восток Африка",
+      "duration": "от 9 дней",
+      "price": 12999,
+      "description": "Неповторимые и свободные острова Сейшелы, хранящие старинные пиратские тайны, – лучшее место, чтобы отвлечься от серых будней! Республика расположена на Амирантских и Сейшельских островах, которые находятся у восточного побережья африканского континента. Из 115 островов, омываемых водами Индийского океана, населены и освоены только 33. Неудивительно, что путешественники, отправляющиеся сюда, чувствуют себя первыми жителями Земли! Конечно, этот эффект тщательно подготовлен – отдых на Сейшельских островах считается одним из самых эксклюзивных направлений туристической индустрии.",
+      "images": [
+        "https://lh3.googleusercontent.com/proxy/529hnVNewx5wPvP5tV3S26QgQfxjc6oPmuBYeKHjuQF7KybTT0LGOKB21bUWJV26W9mQctlEyqTe_Xfl4tI0HgJI7mSYDeEw6bCBf8um5xU9E9Bf2jhPYn07"
+      ]
+    },
+    {
+      "id": 15,
+      "brand": 4,
+      "title": "ОАЭ",
+      "country": "Средний Восток",
+      "duration": "от 5 дней",
+      "price": "4566789",
+      "description": "В ОАЭ не бывает плохой погоды и низкого сезона — ведь здесь что в ноябре, что в июле роскошные отели для качественного отдыха и отличный шоппинг по привлекательным ценам. Все об Эмиратах — Дубай и Шарджа, пляжный отдых, экскурсии и достопримечательности на карте",
+      "images": [
+        "https://atlantisline.com/upload/iblock/21c/21c15a944d4265ec08a18ba3340b764c.jpg"
+      ]
+    },
+    {
+      "id": 16,
+      "brand": 5,
+      "title": "Египе",
+      "duration":"от 6 дней",
+      "price": "5677890",
+      "description": "Египет – страна в Северо-Восточной Африке и на Ближнем Востоке. О ее богатой истории, насчитывающей более пяти тысяч лет, напоминают археологические памятники в плодородной долине реки Нил, среди которых пирамиды Гизы, Большой сфинкс, а также Карнакский храм, стены которого испещрены иероглифами, и Долина царей с гробницами фараонов в районе Луксора. Столица страны Каир славится мечетью Мухаммеда Али, построенной во времена Османской империи, и Египетским музеем, где выставлены мумии фараонов и позолоченные деревянные статуи Тутанхамона.",
+      "images": [
+        "https://www.tourprom.ru/site_media/images/upload/2021/2/10/newsphoto/egipet-otkryitie-rosto-na-donu.jpg"
+      ]
+    },
+    {
+      "id": 17,
+      "brand": 6,
+      "title": "Бали",
+      "duration": "от 6 дней",
+      "price": "567789",
+      "description": "Бали – это остров в Индонезии, облик которого формируют вулканы, поросшие лесом, заливные рисовые поля, пляжи и коралловые рифы. На острове множество храмов, в том числе Пура Лухур Улувату, выстроенный на скале. На юге Бали находятся город Кута с его людными барами и популярные курорты Семиньяк, Санур и Нуса-Дуа. Остров также славится своими центрами йоги и медитации",
+      "images": [
+        "https://www.tourprom.ru/site_media/images/upload/2020/11/28/newsphoto/bali-otkryitie-turistyi.jpg"
+      ]
+    },
+    {
+      "id": 18,
+      "brand": 6,
+      "title": "Франция",
+      "duration": "от 10 дней",
+      "price": "5667789",
+      "description": "Франция – это страна в Западной Европе, на территории которой находятся средневековые города, альпийские деревни и пляжи Средиземного моря. Париж, столица государства, славится своими домами моды, старейшими художественными музеями, в числе которых Лувр, и достопримечательностями, такими как Эйфелева башня. Франция известна своими винами и изысканной кухней. Наскальная живопись в пещере Ласко, амфитеатр Трех Галлий в Лионе и огромный Версальский дворец свидетельствуют о богатой истории этих мест",
+      "images": [
+        "https://inbusiness.kz/ru/images/original/60/images/YfO5tq1m.jpg"
+      ]
+    },
+    {
+      "id": 19,
+      "brand": 2,
+      "title": "Китай",
+      "duration": "от 6 дней",
+      "price": "778990",
+      "description": "Китай – густонаселенная страна в Восточной Азии с разнообразными ландшафтами и рельефом. Здесь можно найти луга, пустыни, горы, озера, реки и побережья протяженностью более 14 тыс. км. Столица страны, Пекин, славится современной архитектурой и древними памятниками, среди которых дворцовый комплекс Запретный город и площадь Тяньаньмэнь. На востоке расположен мировой финансовый центр Шанхай, силуэт которого формируют бесчисленные небоскребы. По северному Китаю, пересекая его с востока на запад, проходит Великая Китайская стена.",
+      "images": [
+        "https://cdn.globaldialog.ru/_/manager/files/59d/7a2f22e00f/china-1.jpg"
+      ]
+    },
+    {
+      "id": 20,
+      "brand": 3,
+      "title": "Япония",
+      "duration": "от 8 дней",
+      "price": "4455678",
+      "description": "Япония – островное государство в Тихом океане, которое славится своими густонаселенными городами, императорскими дворцами, национальными парками, храмами и святилищами. Сеть высокоскоростных железных дорог \"Синкансэн\" представлена на всех основных островах Японского архипелага: Кюсю с субтропическими пляжами Окинавы, Хонсю, на котором расположены Токио и Хиросима с мемориалом жертвам атомной бомбардировки, и Хоккайдо с горнолыжными курортами. Столица страны Токио – центр японской поп-культуры, известный своими небоскребами и магазинами.",
+      "images": [
+        "https://techrocks.ru/wp-content/uploads/2019/09/japan-flower-spring-blossom-cherry-blossom-plant-1593208-pxhere.com-min-1024x683.jpg"
+      ]
+    },
+    {
+      "id": 21,
+      "brand": 4,
+      "title": "Таиланд",
+      "duration": "от 11 дней",
+      "price": "5567789",
+      "description": "Таиланд – удивительная страна, название которой происходит от слова «тхай» - «свобода». В этом поистине сказочном королевстве отдых тоже королевский. Коралловые рифы, буддистские храмы, экзотические растения, крокодиловые фермы, массаж, беспредельный шопинг и бурная ночная жизнь делают туры в Таиланд желанными для тысяч туристов.\nОтдых в Таиланде настолько разнообразен, что каждый найдет для себя что-то свое: ультрасовременный Бангкок и зажигательная клубная Паттайя, экзотика островов Самет и Ко Чанг, чистейшие пляжи Самуи и фантастические скалы Краби. Привлекает эта страна не только своей экзотикой, множеством достопримечательностей и развитой туристической инфраструктурой (отели, пляжи, масса вариантов разнообразного досуга и т.д.), но и возможностью качественно отдохнуть в любое время года",
+      "images": [
+        "https://lh3.googleusercontent.com/proxy/cRXkcOJvNy4Yvsaz7bZ40ne7xXFSZ8n3mTn2jakfWZIV-Ci2Xhn9K1Yd75AtdHkAkSjKM8i0TJIEn-FpdIfrb2ifO5J_Kt8iMtySYHzNosdG"
+      ]
+    },
+    {
+      "id": 22,
+      "brand": 5,
+      "title": "Турция",
+      "duration": "от 3 дней",
+      "price": "6778900",
+      "description": "Туристической столицей Турции является Анталия. Этот живописный курорт славится чистейшими пляжами и шикарными отелями. Купальный сезон здесь открыт с марта по ноябрь. Здесь есть все необходимое для иностранных туристов – множество баров и ресторанов, супермаркетов и уличных лавочек. В городе обилие древних исторических памятников — минарет Иивли (ХI в.), Ворота Адриана (130 г. до н.э.), Археологический музей и др.Также по всей территории Турции расположено множество архитектурных памятников разных эпох — Трои, Милета, Присны, Дидимы, Конья, развалины Пергама, Эфес, Геркулесовы Врата, порт Боррус, Каппадокия, храм Афины, пролив Босфор, горы Улудаг, соленые озера Туз и Ван, гора Большой Арарат, потухшие вулканы Сюпхан, Аладаг и Немруд и многое другое.Сердцем Анталии считается старый квартал Калейчи с узкими улочками, которые ведут к городскому порту. Самым весёлым местом отдыха считается AntalyaBeachPark.Лазурное море, ласковое солнышко, доброжелательные люди вокруг, обилие еды и развлечений — Турция — это то, что надо!\n\nОднако Турция для туристов открыта не только летом. Туристы со всего мира спешат посетить турецкие горнолыжные курорты, ведь они привлекают своей красотой, отличным обслуживанием гостей и приемлемыми ценами. В горах Турции зима мягкая и снежная, снег на вершинах лежит около 180 дней в году. Горнолыжная Турция – замечательный вариант отдыха, как для всей семьи, так и для молодёжи.",
+      "images": [
+        "https://poehalisnami.kharkov.ua/wp-content/uploads/2019/01/gde-luchshe-turkey.jpg"
+      ]
+    },
+    {
+      "id": 23,
+      "brand": 4,
+      "title": " Италия",
+      "duration": "от 10 дней",
+      "price": "456789",
+      "description": "Секрет успеха Италии прост: отличный пляжный отдых на Средиземном море, сверхбогатая «экскурсионка», горнолыжные курорты плюс выгодный шоппинг. От Рима до Неаполя, от заснеженных Альп до солнечных островов — все об Италии: карты, виза, дорога, фото, отели.\nКаждый сезон миллионы отдыхающих с энтузиазмом штурмуют знаменитый «сапог», находя для этого немало веских причин: действительно шикарную и сверхнасыщенную «экскурсионку», чистое теплое море, хорошие пляжи и красивую природу. Путешественников не отпугивают даже сравнительно высокие цены на отдых по-итальянски и достаточно аскетичное оснащение большинства городских отелей. Впрочем, к прибрежным гостиницам это замечание обычно не относится. Еще один пункт итальянской программы — весьма качественное, хоть и недешевое, лечение на термальных курортах.",
+      "images": [
+        "https://cdn.ren.tv/cache/960x540/media/img/70/5b/705b74968bceb310f1ed674f58e9d5cc2ee91cd3.jpg"
+      ]
+    },
+    {
+      "id": 24,
+      "brand": 2,
+      "title": "Бразилия",
+      "duration": "от 8 дней",
+      "price": "5567899000",
+      "description": "Бразилия — это не только сумасшедший карнавал в Рио-де-Жанейро, непроходимые джунгли Амазонии и грохочущие каскады Игуасу, но и знаменитые пляжи Ипанема и Копакабана, отличные отели, великолепная кухня и классный футбол. Все об отдыхе в Бразилии: фото, туры и отзывы.Джунгли Амазонии, золото пляжей Рио-де-Жанейро, тонкий аромат кофе, грохот могучих водопадов — все это, словно магнитом, притягивает в Бразилию миллионы туристов со всего света. Кроме того, пляжи в стране — сплошь с мировыми именами (одна Копакабана чего стоит), море теплое и прозрачное, а о бразильской кухне — как и о бразильских женщинах — туристы неизменно говорят с придыханием. Одно грустно: попасть в эту сказку (по крайней мере, из России) могут лишь путешественники с весьма объемистыми бумажниками — сказывается дороговизна туров в Бразилию, зависящая прежде всего от стоимости трансатлантического перелета.",
+      "images": [
+        "https://internationalinvestment.biz/uploads/posts/2020-10/1601995657_brazilia.jpg"
+      ]
+    },
+    {
+      "id": 25,
+      "brand": 1,
+      "title": "Мексика",
+      "duration": "от 11 дней",
+      "price": "4567890",
+      "description": "Мексика — пестрая смесь испанской, индейской и карибской культур. Отдых на лучших пляжах Канкуна и Ривьера-Майя, древние памятники загадочных цивилизаций и дайвинг на острове Косумель, текила, отличная кухня и зажигательные диско — все о Мексике: туры, цены, отели.\nПредставьте: вот вы стоите в тропической чаще и под крики цветастых попугаев рассматриваете иероглифы майя на стенах храмов Паленке. Или слившись в одно целое с доской для серфинга гребете в сторону прибоя, обрушивающего на побережье мощные бирюзовые волны, а позади вас простираются ярко-белые пляжи. Или погружаетесь с аквалангом в подводную пещеру в окружении рыбок, словно нарисованных яркой гуашью. Или до рассвета и до упада пляшете на лучших в мире дискотеках Акапулько! А в промежутках — стараетесь попробовать хотя бы часть из 300 местных сортов текилы — причем безо всяких там пижонских лаймов и соли, а как суровые мексиканские крестьяне — с томатным соком, щедро приправленным чили. А если перца не хватит — закусить любым из местных угощений, от которых во рту полыхает пожар. В этом вся Мексика — краски, вкусы и прочие ощущения здесь яркие, сочные, чистые, только успевай наслаждаться.",
+      "images": [
+        "https://www.tourprom.ru/site_media/images/news/28072/dtyktryklteyk_1.jpg"
+      ]
+    },
+    {
+      "id": 26,
+      "brand": 5,
+      "title": "Швейцария",
+      "duration": "от 15 дней",
+      "price": "567890",
+      "description": "Являясь традиционной страной туризма, Швейцария удерживает в этой сфере прочные позиции в Европе. Наличие развитой туристической инфраструктуры, сети железных и автомобильных дорог в сочетании с живописной природой и выгодным географическим положением обеспечивает приток в страну значительного количества туристов, прежде всего немцев, американцев, японцев, а в последние годы также русских, индийцев, китайцев. 15 % национального дохода поступает за счёт туризма.\n\nАльпы занимают 2/3 всей территории Швейцарии и ежегодно привлекают в страну тысячи любителей активного отдыха. Наивысшая точка страны находится в Пеннинских Альпах и называется пик Дюфур (4634 м). Туризм в Швейцарии — важная сфера экономики Швейцарии, основанная на использовании рекреационных ресурсов. В бюджет Швейцарии за счёт туризма поступает 1,5 млрд $ ежегодно, что является важной его составляющей. Национальной маркетинговой компанией, занимающейся продвижением Швейцарии на международной арене в качестве страны для туризма и деловых встреч, является Switzerland Tourism.",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5FsU-uGo_VUlojK8Q_o_VJrfr7tnUuKjVqw&usqp=CAU"
+      ]
     }
   ]
 }

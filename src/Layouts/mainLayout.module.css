@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+.logoName {
+  font-family: "Dancing Script", cursive !important;
+  font-size: 27px !important;
+}
+.heroIcon {
+  width: 40px;
+  height: auto;
+  margin-right: 15px;
+}
